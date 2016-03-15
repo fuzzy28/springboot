@@ -1,4 +1,4 @@
-package org.jrue.poc;
+package org.jrue.poc.domain;
 
 import org.springframework.stereotype.Component;
 

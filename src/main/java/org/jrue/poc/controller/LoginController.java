@@ -1,4 +1,4 @@
-package org.jrue.poc;
+package org.jrue.poc.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

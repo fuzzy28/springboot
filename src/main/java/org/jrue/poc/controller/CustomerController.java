@@ -1,4 +1,5 @@
-package org.jrue.poc;
+package org.jrue.poc.controller;
+import org.jrue.poc.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

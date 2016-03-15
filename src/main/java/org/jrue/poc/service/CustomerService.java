@@ -1,8 +1,9 @@
-package org.jrue.poc;
+package org.jrue.poc.service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import org.jrue.poc.domain.Customer;
 import org.springframework.stereotype.Service;
 
 @Service

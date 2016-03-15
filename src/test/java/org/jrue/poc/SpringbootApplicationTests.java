@@ -57,4 +57,22 @@ public class SpringbootApplicationTests {
 		 .andExpect(model().attributeExists("customers"))
 		 .andExpect(model().attribute("customers", hasSize(2)));
 	}
+	
+	@Test
+	@WithMockUser(username="1",password="1",roles={"ADMIN","USER"})
+	public void showSingleCustomerWithAuthenticatedUser() throws Exception {
+		Customer expectedCustomer = new Customer();
+		expectedCustomer.setCustomerCode("0001");
+		expectedCustomer.setName("Joel");
+		expectedCustomer.setLastName("Ruelos");
+		expectedCustomer.setGender((byte)1);
+		expectedCustomer.setAge(23);
+		
+		 mockMvc
+		 .perform(get("/customers/0001"))
+		 	.andExpect(status().isOk())
+		 .andExpect(view().name("customerdetail"))
+		 .andExpect(model().attributeExists("customer"))
+		 .andExpect(model().attribute("customer", samePropertyValuesAs(expectedCustomer)));
+	}
 }

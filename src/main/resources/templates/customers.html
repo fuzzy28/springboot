@@ -5,14 +5,16 @@
 </head>
 <body>
 	<div align="center">
-		<table>
+		<table border="1">
 			<tr>
+				<th>Code</th>
 				<th>Name</th>
 				<th>Last Name</th>
 			</tr>
 			<tr th:each="customer : ${customers}">
-				<td th:text="*{customer.name}">First</td>
-				<td th:text="*{customer.lastName}">Last</td>
+				<td><a th:href="@{/customers/} + ${customer.customerCode}"><span th:text="${customer.customerCode}">Code</span></a></td>
+				<td th:text="${customer.name}">First</td>
+				<td th:text="${customer.lastName}">Last</td>
 			</tr>
 		</table>
 	</div>

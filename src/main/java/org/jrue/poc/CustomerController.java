@@ -23,8 +23,9 @@ public class CustomerController {
 	}
 	
 	@RequestMapping("/{customerId}")
-	public @ResponseBody String showCustomerInfo(@PathVariable String customerId) {		
-		return "{name: "  + customerService.getSingleCustomer(customerId).getName()  + "}";
+	public String showCustomerInfo(Model model,@PathVariable String customerId) {		
+		model.addAttribute("customer", customerService.getSingleCustomer(customerId));
+		return "customerdetail";
 	}
 
 }

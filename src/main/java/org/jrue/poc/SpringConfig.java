@@ -30,7 +30,7 @@ public class SpringConfig extends WebSecurityConfigurerAdapter {
 			.disable()
 			.authorizeRequests()
 			.antMatchers("/customers")
-			.permitAll()
+			.access("hasRole('USER')")
 			.antMatchers("/customers/**")
 			.access("hasRole('ADMIN')")
 		.and()

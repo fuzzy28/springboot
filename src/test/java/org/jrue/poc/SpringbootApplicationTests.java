@@ -23,7 +23,6 @@ import static org.hamcrest.Matchers.*;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = SpringbootApplication.class)
 @WebAppConfiguration
-@WebIntegrationTest(randomPort=true)
 public class SpringbootApplicationTests {
 
 	@Autowired

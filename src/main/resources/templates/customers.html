@@ -11,8 +11,8 @@
 				<th>Last Name</th>
 			</tr>
 			<tr th:each="customer : ${customers}">
-				<td th:text="${customer.key}">First</td>
-				<td th:text="${customer.value}">Last</td>
+				<td th:text="*{customer.name}">First</td>
+				<td th:text="*{customer.lastName}">Last</td>
 			</tr>
 		</table>
 	</div>

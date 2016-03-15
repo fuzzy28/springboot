@@ -55,6 +55,6 @@ public class SpringbootApplicationTests {
 		 	.andExpect(status().isOk())
 		 .andExpect(view().name("customers"))
 		 .andExpect(model().attributeExists("customers"))
-		 .andExpect(model().attribute("customers", notNullValue()));
+		 .andExpect(model().attribute("customers", hasSize(2)));
 	}
 }
